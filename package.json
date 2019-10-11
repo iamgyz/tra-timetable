@@ -5,8 +5,14 @@
   "main": "index.js",
   "author": "gyzheng",
   "license": "MIT",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test/*.js"
+  },
   "dependencies": {
     "htmlparser2": "^3.9.1",
     "node-fetch": "^1.6.1"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
   }
 }

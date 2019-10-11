@@ -52,7 +52,7 @@ async function handleQuery(query) {
   url += "&endTime=" + "23:59";
   url += "&trainTypeList=ALL";
   url += "&transfer=ONE";
-  console.log(url);
+
   try {
     const res = await fetch(url);
     const html = await res.text();
@@ -69,8 +69,8 @@ async function lamda(query) {
   let s = query.s.trim().replace("台", "臺");
   let e = query.e.trim().replace("台", "臺");
 
-  q["fromStation"] = location2code(s) + "-" + escape(s);
-  q["toStation"] = location2code(e) + "-" + escape(e);
+  q["fromStation"] = (location2code(s)>=1000?location2code(s):'0'+location2code(s)) + "-" + escape(s);
+  q["toStation"] = (location2code(e)>=1000?location2code(e):'0'+location2code(e)) + "-" + escape(e);
   let result = {
     status: "",
     data: [],
@@ -134,7 +134,6 @@ function html2json(html) {
 }
 
 module.exports = async (req, res) => {
-  console.log(req.query);
   // Set CORS headers for now.sh
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Request-Method", "*");
@@ -143,7 +142,7 @@ module.exports = async (req, res) => {
   if (req.query.s && req.query.e) {
     try {
       const data = await lamda(req.query);
-      res.send(data);
+      res.status(200).send(data);
     } catch (e) {
       res.status(566).send(e);
     }
