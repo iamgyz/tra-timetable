@@ -1,5 +1,6 @@
 # TRA TimeTable micro service
-A simple serverless function host on now.sh
+A simple serverless function host on now.sh, provide timetable information from TRA.
+
 台鐵時刻查詢2019最新版，查詢起訖站從當前到23:59的所有車次
 
 # Usage
@@ -22,7 +23,7 @@ npm install
 now
 ```
 
-# Local tet
+# Local test
 ```
 now dev
 ```
