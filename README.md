@@ -1,4 +1,6 @@
 # TRA TimeTable micro service
+[![Build Status](https://travis-ci.org/iamgyz/tra-timetable.svg?branch=master)](https://travis-ci.org/iamgyz/tra-timetable)
+
 A simple serverless function host on now.sh, provide timetable information from TRA.
 
 台鐵時刻查詢2019最新版，查詢起訖站從當前到23:59的所有車次
