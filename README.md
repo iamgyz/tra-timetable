@@ -7,6 +7,8 @@ A simple serverless function host on now.sh, provide timetable information from 
 Request
 ```
 https://tra.now.sh/?s=台北&e=台中
+s=起站
+e=迄站
 ```
 Response 
 ```json
