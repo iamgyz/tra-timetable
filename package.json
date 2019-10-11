@@ -1,0 +1,12 @@
+{
+  "name": "tw-railway",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "gyzheng",
+  "license": "MIT",
+  "dependencies": {
+    "htmlparser2": "^3.9.1",
+    "node-fetch": "^1.6.1"
+  }
+}
