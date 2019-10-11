@@ -6,7 +6,7 @@ A simple serverless function host on now.sh, provide timetable information from 
 # Usage
 Request
 ```
-http://localhost:3000/?s=台北&e=台中
+https://tra.now.sh/?s=台北&e=台中
 ```
 Response 
 ```json
